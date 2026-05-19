@@ -1,18 +1,26 @@
 #Could be improved by added a method to escape the loop.
 #!/bin/bash
+
+functionlow() { 
+    echo "Too Low"
+}
+functionhigh() {
+ echo "Too High!"
+}
+functioncorrect() {
+ echo "Correct!"
+}
 while true; do
 read -p "Enter your guess: " user_guess
 count=$(($(find . -maxdepth 1 -type f -printf '+1')))
 if [[ "$user_guess" < "$count" ]]; then
-    echo "Too Low!"
+functionlow
 fi
 if [[ "$user_guess" > "$count" ]]; then
-    echo "Too High!"
+functionhigh
 fi
-   if [[ "$user_guess" == "$count" ]]; then
-     echo "Correct! You guessed it."
+if [[ "$user_guess" == "$count" ]]; then
+functioncorrect
      break  # Exit the loop
-else
-        echo "Incorrect. Try again."
 fi
 done
