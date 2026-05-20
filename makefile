@@ -18,15 +18,15 @@ readme:
 Unix-Workbench peer-graded-assignment
 
 ## Installation
-```bash
+## ```bash
 make all
-```
+## ```
 
 ## Usage
 To update this README with the latest project stats, run:
-```bash
+## ```bash
 make readme
-```
+## ```
 
 ---
 *Generated automatically via Makefile*
